@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';  // Removed unnecessary 'react' import if using the new JSX Transform
 import PropTypes from 'prop-types';
-import NewsList from '../Components/NewsList';
-import LoadingSpinner from '../Components/LoadingSpinner';
-import Error from '../Components/Error';
+import NewsList from './NewsList';
+import LoadingSpinner from './LoadingSpinner';
+import Error from './Error';
 
 const Category = ({ category }) => {
   const [news, setNews] = useState([]);
@@ -11,7 +11,7 @@ const Category = ({ category }) => {
 
   useEffect(() => {
     const fetchNews = async () => {
-      let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=50576079b9d840e1a48ff3014f32c5bd`;
+      const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=50576079b9d840e1a48ff3014f32c5bd`;
 
       try {
         const response = await fetch(url);
