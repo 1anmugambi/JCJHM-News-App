@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import NewsList from './NewsList';
-import LoadingSpinner from './LoadingSpinner';
-import Error from './Error';
+import react, { useEffect, useState } from 'react';
+import NewsList from '../Components/NewsList';
+import LoadingSpinner from '../Components/LoadingSpinner';
+import Error from '../Components/Error';
 
 const Category = ({ category }) => {
   const [news, setNews] = useState([]);
@@ -36,10 +35,6 @@ const Category = ({ category }) => {
       {loading ? <LoadingSpinner /> : error ? <Error message={error} /> : <NewsList news={news} />}
     </div>
   );
-};
-
-Category.propTypes = {
-  category: PropTypes.string.isRequired
 };
 
 export default Category;

@@ -1,0 +1,21 @@
+import React from 'react';
+import "bootstrap/dist/css/bootstrap.min.css"
+
+const NewsItem = ({ article }) => {
+  return (
+
+  <div className="col">
+    <div className="card">
+      <img src={article.urlToImage} className="card-img-top" alt={article.title}/>
+      <div className="card-body">
+        <h5 className="card-title">{article.title}</h5>
+        <p className="card-text">{article.content}</p>
+        <a className='btn btn-primary' href={article.url} target="_blank" rel="noopener noreferrer">Read more</a>
+      </div>
+    </div>
+  </div>
+
+  );
+};
+
+export default NewsItem;
