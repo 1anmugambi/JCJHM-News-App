@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NewsList from '../Components/NewsList';
 import LoadingSpinner from '../Components/LoadingSpinner';
 import Error from '../Components/Error';
